@@ -20,4 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
+//get all employees
 Route::get('employees', [EmployeeController::class,'getEmployee']);
+
+//get Specic employee detail
+Route::get('employee/{id}', [EmployeeController::class,'getEmployeeById']);
