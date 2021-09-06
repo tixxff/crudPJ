@@ -27,7 +27,15 @@ export class EmployeesComponent implements OnInit {
   insertData() {
     this.dataService.insertData(this.employee).subscribe( res => {
       this.getEmployeesData();
-    })
+    });
   }
+
+  
+  deleteData(id: any) {
+    this.dataService.deleteData(id).subscribe(res => {
+      this.getEmployeesData();
+    });
+  }
+
  
 }
