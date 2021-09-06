@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { EmployeesComponent } from './components/employees/employees.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 const appRoutes: Routes = [
   
   { path: '', component:EmployeesComponent }
@@ -19,6 +21,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
