@@ -20,4 +20,13 @@ export class DataService {
   deleteData(id: any) {
     return this.httpClient.delete('http://127.0.0.1:8000/api/deleteEmployee/'+id);
   }
+
+  getEmployeeById(id: any) {
+    return this.httpClient.get('http://127.0.0.1:8000/api/employee/'+id);
+  }
+
+  updatetData(id: any, data: any) {
+    return this.httpClient.put('http://127.0.0.1:8000/api/updateEmployee/'+id, data);
+  }
+
 }

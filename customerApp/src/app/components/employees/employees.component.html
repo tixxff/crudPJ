@@ -14,7 +14,7 @@
         <input type="text" name="salary" class="form-control" [(ngModel)]="employee.salary">
     </div>
 
-    <button class="btn btn-dark btn-sm mt-4">Insert</button>
+    <button class="btn btn-dark btn-sm mt-4">Submit</button>
 </form>
 
 <table class="table">
@@ -33,7 +33,10 @@
             <td>{{ emp.name }}</td>
             <td>{{ emp.email}}</td>
             <td>{{ emp.salary }}</td>
-            <td><button class="btn btn-danger btn-sm" (click)="deleteData(emp.id)">Delete</button></td>
+            <td>
+                <button class="btn btn-danger btn-sm" (click)="deleteData(emp.id)">Delete</button>
+                <button class="btn btn-warning btn-sm mx-2" routerLink="edit/{{ emp.id }}">Edit</button>
+            </td>
         </tr>
     </tbody>
 </table>
